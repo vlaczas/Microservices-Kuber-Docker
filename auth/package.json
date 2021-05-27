@@ -7,11 +7,14 @@
     "start": "nodemon .",
     "dev": "ts-node src/index.ts",
     "compile": "tsc -p ./",
-    "test": "jest --watchAll --no-cache src"
+    "test": "jest"
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/jest.setup.ts"
+    ]
   },
   "keywords": [],
   "author": "",

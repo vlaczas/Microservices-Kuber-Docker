@@ -1,4 +1,4 @@
-FROM node:alpine3.13
+FROM node:lts-alpine3.13
 ENV NODE_ENV=production
 WORKDIR /app
 COPY package.json .

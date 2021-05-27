@@ -14,5 +14,13 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "dist/**/*.js"
+            dest: .
+    - image: vlaczas/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: ".nuxt"
             dest: .
